@@ -1,12 +1,12 @@
 {
     "policy": [
         {
-            "guid": "c231324e-bbd1-4b9b-8ef4-ec5cd53bbc08",
+            "guid": "0a9ed253-f2d0-49ae-812e-a3fe4e3dacc0",
             "policyDetail": {
-                "folderId": "8840cc6bcfd468648dc816432903db55",
-                "guid": "c231324e-bbd1-4b9b-8ef4-ec5cd53bbc08",
-                "id": "32b0b7865dc5d3a00dcf2420160fe95b",
-                "name": "APIIDA Extract API Key Values from Request",
+                "folderId": "bfd92d70c60448168e42241232b3f589",
+                "guid": "0a9ed253-f2d0-49ae-812e-a3fe4e3dacc0",
+                "id": "bfd92d70c60448168e42241232b383c5",
+                "name": "apiida.utils.loadCache",
                 "policyType": "Include",
                 "properties": {
                     "property": [
@@ -32,21 +32,21 @@
                         "resource": [
                             {
                                 "type": "policy",
-                                "content": "APIIDA Extract API Key Values from Request.xml"
+                                "content": "APIIDA\/Profiling\/Encapsulated\/apiida.utils.loadCache.xml"
                             }
                         ]
                     }
                 ]
             },
-            "id": "32b0b7865dc5d3a00dcf2420160fe95b"
+            "id": "bfd92d70c60448168e42241232b383c5"
         },
         {
-            "guid": "cfa7239a-60e4-483a-9d45-c364f2fb673d",
+            "guid": "7ea45cb7-499a-4463-8c44-11405a3096b0",
             "policyDetail": {
-                "folderId": "161861da3a78c5dcdc62696d16914781",
-                "guid": "cfa7239a-60e4-483a-9d45-c364f2fb673d",
-                "id": "24e6fd7c5b6fb3a96690246c8ac49304",
-                "name": "#OTK Storage Configuration",
+                "folderId": "bfd92d70c60448168e42241232b3f589",
+                "guid": "7ea45cb7-499a-4463-8c44-11405a3096b0",
+                "id": "bfd92d70c60448168e42241232b45b96",
+                "name": "apiida.utils.logger",
                 "policyType": "Include",
                 "properties": {
                     "property": [
@@ -72,21 +72,21 @@
                         "resource": [
                             {
                                 "type": "policy",
-                                "content": "#OTK Storage Configuration.xml"
+                                "content": "APIIDA\/Profiling\/Encapsulated\/apiida.utils.logger.xml"
                             }
                         ]
                     }
                 ]
             },
-            "id": "24e6fd7c5b6fb3a96690246c8ac49304"
+            "id": "bfd92d70c60448168e42241232b45b96"
         },
         {
-            "guid": "71039e77-2081-40df-a892-50097f1c18de",
+            "guid": "6ef74116-8afc-4ed0-9b58-c01790f48be4",
             "policyDetail": {
-                "folderId": "e001cfd0c1c1ffaa18e187b5e72fc858",
-                "guid": "71039e77-2081-40df-a892-50097f1c18de",
-                "id": "e001cfd0c1c1ffaa18e187b5e72fc9d0",
-                "name": "OTK Storage Configuration",
+                "folderId": "bfd92d70c60448168e42241232b3f589",
+                "guid": "6ef74116-8afc-4ed0-9b58-c01790f48be4",
+                "id": "bfd92d70c60448168e42241232b383af",
+                "name": "apiida.utils.logInternalString",
                 "policyType": "Include",
                 "properties": {
                     "property": [
@@ -112,101 +112,21 @@
                         "resource": [
                             {
                                 "type": "policy",
-                                "content": "OTK Storage Configuration.xml"
+                                "content": "APIIDA\/Profiling\/Encapsulated\/apiida.utils.logInternalString.xml"
                             }
                         ]
                     }
                 ]
             },
-            "id": "e001cfd0c1c1ffaa18e187b5e72fc9d0"
+            "id": "bfd92d70c60448168e42241232b383af"
         },
         {
-            "guid": "01c89bcf-5271-46f6-86f5-27436d2df4ca",
+            "guid": "71a42f35-023e-4662-8664-b10436e3b5c3",
             "policyDetail": {
-                "folderId": "539536d24c8fd53a68b1c8abf52bda41",
-                "guid": "01c89bcf-5271-46f6-86f5-27436d2df4ca",
-                "id": "7b6a05bc22d62140fd3a3758b00e9b97",
-                "name": "APIIDA API Control Plane Integration - JSON Escape",
-                "policyType": "Include",
-                "properties": {
-                    "property": [
-                        {
-                            "key": "hasRouting",
-                            "booleanValue": "false"
-                        },
-                        {
-                            "key": "revision",
-                            "longValue": "2"
-                        },
-                        {
-                            "key": "soap",
-                            "booleanValue": "false"
-                        }
-                    ]
-                }
-            },
-            "resources": {
-                "resourceSet": [
-                    {
-                        "tag": "policy",
-                        "resource": [
-                            {
-                                "type": "policy",
-                                "content": "APIIDA API Control Plane Integration - JSON Escape.xml"
-                            }
-                        ]
-                    }
-                ]
-            },
-            "id": "7b6a05bc22d62140fd3a3758b00e9b97"
-        },
-        {
-            "guid": "54804a16-4465-40c0-9e10-ab2660e1979b",
-            "policyDetail": {
-                "folderId": "539536d24c8fd53a68b1c8abf52bda41",
-                "guid": "54804a16-4465-40c0-9e10-ab2660e1979b",
-                "id": "379db31fbdd5e78c8acc9ba137040c61",
-                "name": "APIIDA API Control Plane Integration - API-Keys-Retrieve",
-                "policyType": "Include",
-                "properties": {
-                    "property": [
-                        {
-                            "key": "hasRouting",
-                            "booleanValue": "true"
-                        },
-                        {
-                            "key": "revision",
-                            "longValue": "3"
-                        },
-                        {
-                            "key": "soap",
-                            "booleanValue": "false"
-                        }
-                    ]
-                }
-            },
-            "resources": {
-                "resourceSet": [
-                    {
-                        "tag": "policy",
-                        "resource": [
-                            {
-                                "type": "policy",
-                                "content": "APIIDA API Control Plane Integration - API-Keys-Retrieve.xml"
-                            }
-                        ]
-                    }
-                ]
-            },
-            "id": "379db31fbdd5e78c8acc9ba137040c61"
-        },
-        {
-            "guid": "6e4aef5f-6520-42f4-9eed-fa20a4cad557",
-            "policyDetail": {
-                "folderId": "8840cc6bcfd468648dc816432903db55",
-                "guid": "6e4aef5f-6520-42f4-9eed-fa20a4cad557",
-                "id": "8840cc6bcfd468648dc816432903e1bb",
-                "name": "APIIDA API Key Lookup",
+                "folderId": "bfd92d70c60448168e42241232b3f589",
+                "guid": "71a42f35-023e-4662-8664-b10436e3b5c3",
+                "id": "bfd92d70c60448168e42241232b383e0",
+                "name": "apiida.utils.storeCache",
                 "policyType": "Include",
                 "properties": {
                     "property": [
@@ -232,21 +152,21 @@
                         "resource": [
                             {
                                 "type": "policy",
-                                "content": "APIIDA API Key Lookup.xml"
+                                "content": "APIIDA\/Profiling\/Encapsulated\/apiida.utils.storeCache.xml"
                             }
                         ]
                     }
                 ]
             },
-            "id": "8840cc6bcfd468648dc816432903e1bb"
+            "id": "bfd92d70c60448168e42241232b383e0"
         },
         {
-            "guid": "834c39cd-17ac-4a54-a641-a49a17fc02f8",
+            "guid": "dc5b6700-f9e5-425b-ad86-14520935a036",
             "policyDetail": {
-                "folderId": "539536d24c8fd53a68b1c8abf52bda41",
-                "guid": "834c39cd-17ac-4a54-a641-a49a17fc02f8",
-                "id": "379db31fbdd5e78c8acc9ba13703f1f1",
-                "name": "APIIDA API Control Plane Integration - API-Plans-Retrieve",
+                "folderId": "bfd92d70c60448168e42241232b3f589",
+                "guid": "dc5b6700-f9e5-425b-ad86-14520935a036",
+                "id": "bfd92d70c60448168e42241232b3856f",
+                "name": "apiida.utils.deleteCache",
                 "policyType": "Include",
                 "properties": {
                     "property": [
@@ -272,21 +192,21 @@
                         "resource": [
                             {
                                 "type": "policy",
-                                "content": "APIIDA API Control Plane Integration - API-Plans-Retrieve.xml"
+                                "content": "APIIDA\/Profiling\/Encapsulated\/apiida.utils.deleteCache.xml"
                             }
                         ]
                     }
                 ]
             },
-            "id": "379db31fbdd5e78c8acc9ba13703f1f1"
+            "id": "bfd92d70c60448168e42241232b3856f"
         },
         {
-            "guid": "2becbab8-4972-4b69-a995-585d7b1c707d",
+            "guid": "2f703b7d-3821-48ee-a6c3-19412ec5dca3",
             "policyDetail": {
-                "folderId": "8840cc6bcfd468648dc816432903db55",
-                "guid": "2becbab8-4972-4b69-a995-585d7b1c707d",
-                "id": "8840cc6bcfd468648dc816432903e19d",
-                "name": "APIIDA API Plan Lookup",
+                "folderId": "bfd92d70c60448168e42241232b3f549",
+                "guid": "2f703b7d-3821-48ee-a6c3-19412ec5dca3",
+                "id": "9c3a0d3fbda7cb031ade0c8ebd947b6c",
+                "name": "apiida.utils.profiling.include.profiling",
                 "policyType": "Include",
                 "properties": {
                     "property": [
@@ -312,21 +232,21 @@
                         "resource": [
                             {
                                 "type": "policy",
-                                "content": "APIIDA API Plan Lookup.xml"
+                                "content": "APIIDA\/Profiling\/Includes\/apiida.utils.profiling.include.profiling.xml"
                             }
                         ]
                     }
                 ]
             },
-            "id": "8840cc6bcfd468648dc816432903e19d"
+            "id": "9c3a0d3fbda7cb031ade0c8ebd947b6c"
         },
         {
-            "guid": "b6cddd56-e897-48e3-a105-8b8b008df51d",
+            "guid": "4b6cca03-907b-4989-98de-f07ec42c129e",
             "policyDetail": {
-                "folderId": "8840cc6bcfd468648dc816432903db55",
-                "guid": "b6cddd56-e897-48e3-a105-8b8b008df51d",
-                "id": "8840cc6bcfd468648dc816432903e588",
-                "name": "APIIDA Apply API Plan Limits",
+                "folderId": "bfd92d70c60448168e42241232b3f549",
+                "guid": "4b6cca03-907b-4989-98de-f07ec42c129e",
+                "id": "bfd92d70c60448168e42241232b3f5d0",
+                "name": "apiida.utils.profiling.include.parseReportingString",
                 "policyType": "Include",
                 "properties": {
                     "property": [
@@ -352,21 +272,21 @@
                         "resource": [
                             {
                                 "type": "policy",
-                                "content": "APIIDA Apply API Plan Limits.xml"
+                                "content": "APIIDA\/Profiling\/Includes\/apiida.utils.profiling.include.parseReportingString.xml"
                             }
                         ]
                     }
                 ]
             },
-            "id": "8840cc6bcfd468648dc816432903e588"
+            "id": "bfd92d70c60448168e42241232b3f5d0"
         },
         {
-            "guid": "ac9c6c70-be4f-4a0a-b9e9-7378a86276af",
+            "guid": "88f693d9-aa52-49e9-8b80-ef39a6ce5313",
             "policyDetail": {
-                "folderId": "8840cc6bcfd468648dc816432903db55",
-                "guid": "ac9c6c70-be4f-4a0a-b9e9-7378a86276af",
-                "id": "8840cc6bcfd468648dc816432903db98",
-                "name": "APIIDA API Plans Traffic Enforcement",
+                "folderId": "bfd92d70c60448168e42241232b3f589",
+                "guid": "88f693d9-aa52-49e9-8b80-ef39a6ce5313",
+                "id": "bfd92d70c60448168e42241232b385cb",
+                "name": "apiida.utils.startProfiling",
                 "policyType": "Include",
                 "properties": {
                     "property": [
@@ -392,13 +312,93 @@
                         "resource": [
                             {
                                 "type": "policy",
-                                "content": "APIIDA API Plans Traffic Enforcement.xml"
+                                "content": "APIIDA\/Profiling\/Encapsulated\/apiida.utils.startProfiling.xml"
                             }
                         ]
                     }
                 ]
             },
-            "id": "8840cc6bcfd468648dc816432903db98"
+            "id": "bfd92d70c60448168e42241232b385cb"
+        },
+        {
+            "guid": "0987aca2-9c3d-4b07-adf5-fbd213f87b7d",
+            "policyDetail": {
+                "folderId": "bfd92d70c60448168e42241232b3f589",
+                "guid": "0987aca2-9c3d-4b07-adf5-fbd213f87b7d",
+                "id": "bfd92d70c60448168e42241232b38624",
+                "name": "apiida.utils.stopProfiling",
+                "policyType": "Include",
+                "properties": {
+                    "property": [
+                        {
+                            "key": "hasRouting",
+                            "booleanValue": "false"
+                        },
+                        {
+                            "key": "revision",
+                            "longValue": "1"
+                        },
+                        {
+                            "key": "soap",
+                            "booleanValue": "false"
+                        }
+                    ]
+                }
+            },
+            "resources": {
+                "resourceSet": [
+                    {
+                        "tag": "policy",
+                        "resource": [
+                            {
+                                "type": "policy",
+                                "content": "APIIDA\/Profiling\/Encapsulated\/apiida.utils.stopProfiling.xml"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "id": "bfd92d70c60448168e42241232b38624"
+        },
+        {
+            "guid": "4233e607-67e4-4be8-818e-a0be884458b1",
+            "policyDetail": {
+                "folderId": "5662218eef8f475e5119b34ffade20db",
+                "guid": "4233e607-67e4-4be8-818e-a0be884458b1",
+                "id": "adf14be5ebadd3e97475b636fedf4cdd",
+                "name": "APIIDA Authentication",
+                "policyType": "Include",
+                "properties": {
+                    "property": [
+                        {
+                            "key": "hasRouting",
+                            "booleanValue": "false"
+                        },
+                        {
+                            "key": "revision",
+                            "longValue": "1"
+                        },
+                        {
+                            "key": "soap",
+                            "booleanValue": "false"
+                        }
+                    ]
+                }
+            },
+            "resources": {
+                "resourceSet": [
+                    {
+                        "tag": "policy",
+                        "resource": [
+                            {
+                                "type": "policy",
+                                "content": "APIIDA\/APIIDA Authentication.xml"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "id": "adf14be5ebadd3e97475b636fedf4cdd"
         }
     ]
 }
