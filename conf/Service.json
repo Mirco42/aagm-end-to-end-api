@@ -3,7 +3,6 @@
         {
             "serviceDetail": {
                 "folderId": "5662218eef8f475e5119b34ffade20db",
-                "id": "5662218eef8f475e5119b34ffade211e",
                 "name": "APIIDA Audit API",
                 "enabled": "true",
                 "serviceMappings": {
@@ -46,7 +45,8 @@
                             "booleanValue": "false"
                         }
                     ]
-                }
+                },
+                "id": "5662218eef8f475e5119b34ffade211e"
             },
             "resources": {
                 "resourceSet": [
@@ -66,7 +66,6 @@
         {
             "serviceDetail": {
                 "folderId": "5662218eef8f475e5119b34ffade20db",
-                "id": "5662218eef8f475e5119b34ffade2162",
                 "name": "APIIDA Discovery API",
                 "enabled": "true",
                 "serviceMappings": {
@@ -109,7 +108,8 @@
                             "booleanValue": "false"
                         }
                     ]
-                }
+                },
+                "id": "5662218eef8f475e5119b34ffade2162"
             },
             "resources": {
                 "resourceSet": [
@@ -129,7 +129,6 @@
         {
             "serviceDetail": {
                 "folderId": "5662218eef8f475e5119b34ffade20db",
-                "id": "5662218eef8f475e5119b34ffade21a6",
                 "name": "APIIDA Log API",
                 "enabled": "true",
                 "serviceMappings": {
@@ -172,7 +171,8 @@
                             "booleanValue": "false"
                         }
                     ]
-                }
+                },
+                "id": "5662218eef8f475e5119b34ffade21a6"
             },
             "resources": {
                 "resourceSet": [
@@ -192,7 +192,6 @@
         {
             "serviceDetail": {
                 "folderId": "5662218eef8f475e5119b34ffade20db",
-                "id": "5662218eef8f475e5119b34ffade21eb",
                 "name": "APIIDA Metrics API",
                 "enabled": "true",
                 "serviceMappings": {
@@ -235,7 +234,8 @@
                             "booleanValue": "false"
                         }
                     ]
-                }
+                },
+                "id": "5662218eef8f475e5119b34ffade21eb"
             },
             "resources": {
                 "resourceSet": [
@@ -255,7 +255,6 @@
         {
             "serviceDetail": {
                 "folderId": "5662218eef8f475e5119b34ffade20db",
-                "id": "9c3a0d3fbda7cb031ade0c8ebd947828",
                 "name": "APIIDA Profiling API",
                 "enabled": "true",
                 "serviceMappings": {
@@ -298,7 +297,8 @@
                             "booleanValue": "false"
                         }
                     ]
-                }
+                },
+                "id": "9c3a0d3fbda7cb031ade0c8ebd947828"
             },
             "resources": {
                 "resourceSet": [
