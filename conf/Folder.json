@@ -2,23 +2,8 @@
     "folder": [
         {
             "folderId": "0000000000000000ffffffffffffec76",
-            "name": "APIIDA",
-            "id": "5662218eef8f475e5119b34ffade20db"
-        },
-        {
-            "folderId": "5662218eef8f475e5119b34ffade20db",
-            "name": "Profiling",
-            "id": "9c3a0d3fbda7cb031ade0c8ebd9750e2"
-        },
-        {
-            "folderId": "9c3a0d3fbda7cb031ade0c8ebd9750e2",
-            "name": "Includes",
-            "id": "bfd92d70c60448168e42241232b3f549"
-        },
-        {
-            "folderId": "9c3a0d3fbda7cb031ade0c8ebd9750e2",
-            "name": "Encapsulated",
-            "id": "bfd92d70c60448168e42241232b3f589"
+            "name": "Demo",
+            "id": "b56f10f3c04cd607eb080dce4b0426e5"
         }
     ]
 }
