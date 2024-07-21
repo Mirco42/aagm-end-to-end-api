@@ -2,12 +2,12 @@
     "service": [
         {
             "serviceDetail": {
-                "folderId": "b56f10f3c04cd607eb080dce4b0426e5",
-                "name": "Parrot API",
+                "folderId": "5662218eef8f475e5119b34ffade20db",
+                "name": "APIIDA Audit API",
                 "enabled": "true",
                 "serviceMappings": {
                     "httpMapping": {
-                        "urlPattern": "\/parrot",
+                        "urlPattern": "\/aagm\/audit",
                         "verbs": {
                             "verb": [
                                 "GET",
@@ -46,7 +46,7 @@
                         }
                     ]
                 },
-                "id": "b56f10f3c04cd607eb080dce4b042769"
+                "id": "5662218eef8f475e5119b34ffade211e"
             },
             "resources": {
                 "resourceSet": [
@@ -55,22 +55,22 @@
                         "resource": [
                             {
                                 "type": "policy",
-                                "content": "Demo\/Parrot API.xml"
+                                "content": "APIIDA\/APIIDA Audit API.xml"
                             }
                         ]
                     }
                 ]
             },
-            "id": "b56f10f3c04cd607eb080dce4b042769"
+            "id": "5662218eef8f475e5119b34ffade211e"
         },
         {
             "serviceDetail": {
-                "folderId": "b56f10f3c04cd607eb080dce4b0426e5",
-                "name": "Parrot API Backend",
+                "folderId": "5662218eef8f475e5119b34ffade20db",
+                "name": "APIIDA Discovery API",
                 "enabled": "true",
                 "serviceMappings": {
                     "httpMapping": {
-                        "urlPattern": "\/parrot2",
+                        "urlPattern": "\/aagm\/discovery",
                         "verbs": {
                             "verb": [
                                 "GET",
@@ -109,7 +109,7 @@
                         }
                     ]
                 },
-                "id": "b56f10f3c04cd607eb080dce4b0427ca"
+                "id": "5662218eef8f475e5119b34ffade2162"
             },
             "resources": {
                 "resourceSet": [
@@ -118,22 +118,148 @@
                         "resource": [
                             {
                                 "type": "policy",
-                                "content": "Demo\/Parrot API Backend.xml"
+                                "content": "APIIDA\/APIIDA Discovery API.xml"
                             }
                         ]
                     }
                 ]
             },
-            "id": "b56f10f3c04cd607eb080dce4b0427ca"
+            "id": "5662218eef8f475e5119b34ffade2162"
         },
         {
             "serviceDetail": {
-                "folderId": "b56f10f3c04cd607eb080dce4b0426e5",
-                "name": "Demo Alarm API",
+                "folderId": "5662218eef8f475e5119b34ffade20db",
+                "name": "APIIDA Log API",
                 "enabled": "true",
                 "serviceMappings": {
                     "httpMapping": {
-                        "urlPattern": "\/demoAlarm",
+                        "urlPattern": "\/aagm\/logs",
+                        "verbs": {
+                            "verb": [
+                                "GET",
+                                "POST",
+                                "PUT",
+                                "DELETE"
+                            ]
+                        }
+                    }
+                },
+                "properties": {
+                    "property": [
+                        {
+                            "key": "hasRouting",
+                            "booleanValue": "true"
+                        },
+                        {
+                            "key": "internal",
+                            "booleanValue": "false"
+                        },
+                        {
+                            "key": "policyRevision",
+                            "longValue": "1"
+                        },
+                        {
+                            "key": "soap",
+                            "booleanValue": "false"
+                        },
+                        {
+                            "key": "tracingEnabled",
+                            "booleanValue": "false"
+                        },
+                        {
+                            "key": "wssProcessingEnabled",
+                            "booleanValue": "false"
+                        }
+                    ]
+                },
+                "id": "5662218eef8f475e5119b34ffade21a6"
+            },
+            "resources": {
+                "resourceSet": [
+                    {
+                        "tag": "policy",
+                        "resource": [
+                            {
+                                "type": "policy",
+                                "content": "APIIDA\/APIIDA Log API.xml"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "id": "5662218eef8f475e5119b34ffade21a6"
+        },
+        {
+            "serviceDetail": {
+                "folderId": "5662218eef8f475e5119b34ffade20db",
+                "name": "APIIDA Metrics API",
+                "enabled": "true",
+                "serviceMappings": {
+                    "httpMapping": {
+                        "urlPattern": "\/aagm\/metrics",
+                        "verbs": {
+                            "verb": [
+                                "GET",
+                                "POST",
+                                "PUT",
+                                "DELETE"
+                            ]
+                        }
+                    }
+                },
+                "properties": {
+                    "property": [
+                        {
+                            "key": "hasRouting",
+                            "booleanValue": "true"
+                        },
+                        {
+                            "key": "internal",
+                            "booleanValue": "false"
+                        },
+                        {
+                            "key": "policyRevision",
+                            "longValue": "1"
+                        },
+                        {
+                            "key": "soap",
+                            "booleanValue": "false"
+                        },
+                        {
+                            "key": "tracingEnabled",
+                            "booleanValue": "false"
+                        },
+                        {
+                            "key": "wssProcessingEnabled",
+                            "booleanValue": "false"
+                        }
+                    ]
+                },
+                "id": "5662218eef8f475e5119b34ffade21eb"
+            },
+            "resources": {
+                "resourceSet": [
+                    {
+                        "tag": "policy",
+                        "resource": [
+                            {
+                                "type": "policy",
+                                "content": "APIIDA\/APIIDA Metrics API.xml"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "id": "5662218eef8f475e5119b34ffade21eb"
+        },
+        {
+            "serviceDetail": {
+                "folderId": "5662218eef8f475e5119b34ffade20db",
+                "name": "APIIDA Profiling API",
+                "enabled": "true",
+                "serviceMappings": {
+                    "httpMapping": {
+                        "urlPattern": "\/aagm\/profiling",
                         "verbs": {
                             "verb": [
                                 "GET",
@@ -172,7 +298,7 @@
                         }
                     ]
                 },
-                "id": "b56f10f3c04cd607eb080dce4b042815"
+                "id": "9c3a0d3fbda7cb031ade0c8ebd947828"
             },
             "resources": {
                 "resourceSet": [
@@ -181,13 +307,13 @@
                         "resource": [
                             {
                                 "type": "policy",
-                                "content": "Demo\/Demo Alarm API.xml"
+                                "content": "APIIDA\/APIIDA Profiling API.xml"
                             }
                         ]
                     }
                 ]
             },
-            "id": "b56f10f3c04cd607eb080dce4b042815"
+            "id": "9c3a0d3fbda7cb031ade0c8ebd947828"
         }
     ]
 }
