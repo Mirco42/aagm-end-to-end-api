@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsp:Policy xmlns:L7p="http://www.layer7tech.com/ws/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2002/12/policy">
+    <wsp:All wsp:Usage="Required">
+        <L7p:CommentAssertion>
+            <L7p:Comment stringValue="*** APIIDA Discovery API for APIIDA API Gateway Manager ***"/>
+        </L7p:CommentAssertion>
+        <L7p:CommentAssertion>
+            <L7p:Comment stringValue="*** Version: 2.3.0 ***"/>
+        </L7p:CommentAssertion>
+        <L7p:Include>
+            <L7p:PolicyGuid stringValue="4233e607-67e4-4be8-818e-a0be884458b1"/>
+            <L7p:PolicyName stringValue="APIIDA Authentication"/>
+        </L7p:Include>
+        <L7p:JdbcQuery>
+            <L7p:ConnectionName stringValue="${gateway.aagm.db}"/>
+            <L7p:NamingMap mapValue="included">
+                <L7p:entry>
+                    <L7p:key stringValue="jdbc_url"/>
+                    <L7p:value stringValue="url"/>
+                </L7p:entry>
+                <L7p:entry>
+                    <L7p:key stringValue="password"/>
+                    <L7p:value stringValue="password"/>
+                </L7p:entry>
+                <L7p:entry>
+                    <L7p:key stringValue="user_name"/>
+                    <L7p:value stringValue="username"/>
+                </L7p:entry>
+            </L7p:NamingMap>
+            <L7p:SqlQuery stringValueReference="inline"><![CDATA[SELECT jdbc_url, user_name, password FROM jdbc_connection
+WHERE name=${gateway.aagm.db};]]></L7p:SqlQuery>
+            <L7p:VariablePrefix stringValue="connectionQuery"/>
+        </L7p:JdbcQuery>
+        <L7p:CustomAssertion>
+            <L7p:base64SerializedValue>rO0ABXNyADFjb20ubDd0ZWNoLnBvbGljeS5hc3NlcnRpb24uQ3VzdG9tQXNzZXJ0aW9uSG9sZGVyZtcreFwddTICAAlaAAxpc1VpQXV0b09wZW5MAApjYXRlZ29yaWVzdAAPTGphdmEvdXRpbC9TZXQ7TAAIY2F0ZWdvcnl0ACpMY29tL2w3dGVjaC9wb2xpY3kvYXNzZXJ0aW9uL2V4dC9DYXRlZ29yeTtMAA9jdXN0b21Bc3NlcnRpb250ADFMY29tL2w3dGVjaC9wb2xpY3kvYXNzZXJ0aW9uL2V4dC9DdXN0b21Bc3NlcnRpb247TAAUY3VzdG9tTW9kdWxlRmlsZU5hbWV0ABJMamF2YS9sYW5nL1N0cmluZztMAA9kZXNjcmlwdGlvblRleHRxAH4ABEwAD3BhbGV0dGVOb2RlTmFtZXEAfgAETAAOcG9saWN5Tm9kZU5hbWVxAH4ABEwAHnJlZ2lzdGVyZWRDdXN0b21GZWF0dXJlU2V0TmFtZXEAfgAEeHIAJWNvbS5sN3RlY2gucG9saWN5LmFzc2VydGlvbi5Bc3NlcnRpb27bX2OZPL2isQIAAloAB2VuYWJsZWRMABBhc3NlcnRpb25Db21tZW50dAAvTGNvbS9sN3RlY2gvcG9saWN5L2Fzc2VydGlvbi9Bc3NlcnRpb24kQ29tbWVudDt4cAFwAXNyABFqYXZhLnV0aWwuSGFzaFNldLpEhZWWuLc0AwAAeHB3DAAAAAI/QAAAAAAAAXNyAChjb20ubDd0ZWNoLnBvbGljeS5hc3NlcnRpb24uZXh0LkNhdGVnb3J5WrCcZaFE/jUCAAJJAAVteUtleUwABm15TmFtZXEAfgAEeHAAAAALdAAQQ3VzdG9tQXNzZXJ0aW9uc3hwc3IAN2NvbS5sN3RlY2guY3VzdG9tLmRpc2NvdmVyeWFzc2VydGlvbi5EaXNjb3ZlcnlBc3NlcnRpb255MRvi4eQgvAIAAHhwdAAWRGlzY292ZXJ5QXNzZXJ0aW9uLmphcnBwcHA=</L7p:base64SerializedValue>
+        </L7p:CustomAssertion>
+        <L7p:HardcodedResponse>
+            <L7p:Base64ResponseBody stringValue="JHtvdXRwdXREaXNjb3ZlcnlEYXRhfQ=="/>
+            <L7p:ResponseContentType stringValue="application/json; charset=UTF-8"/>
+        </L7p:HardcodedResponse>
+    </wsp:All>
+</wsp:Policy>
