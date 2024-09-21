@@ -1,33 +1,75 @@
 {
     "encapsulatedassertion": [
         {
-            "name": "APIIDA Utility - Load Cache",
-            "guid": "590ca436-8955-4ce1-a2ff-e1721279d816",
+            "name": "APIIDA Extract API Key Values from Request",
+            "guid": "2ecd447b-5c05-4123-b4fc-da035eba4efb",
             "policyReference": {
-                "id": "bfd92d70c60448168e42241232b383c5",
+                "id": "32b0b7865dc5d3a00dcf2420160fe95b",
+                "resourceUri": "http:\/\/ns.l7tech.com\/2010\/04\/gateway-management\/policies"
+            },
+            "encapsulatedArguments": [],
+            "encapsulatedResults": {
+                "encapsulatedAssertionResult": [
+                    {
+                        "resultName": "apikey",
+                        "resultType": "string"
+                    },
+                    {
+                        "resultName": "keysecret",
+                        "resultType": "string"
+                    }
+                ]
+            },
+            "properties": {
+                "property": [
+                    {
+                        "key": "allowTracing",
+                        "stringValue": {
+                            "value": "false"
+                        }
+                    },
+                    {
+                        "key": "description",
+                        "stringValue": {
+                            "value": "APIIDA Extract API Key Values from Request"
+                        }
+                    },
+                    {
+                        "key": "paletteFolder",
+                        "stringValue": {
+                            "value": "customAssertions"
+                        }
+                    },
+                    {
+                        "key": "passMetricsToParent",
+                        "stringValue": {
+                            "value": "false"
+                        }
+                    },
+                    {
+                        "key": "policyGuid",
+                        "stringValue": {
+                            "value": "c231324e-bbd1-4b9b-8ef4-ec5cd53bbc08"
+                        }
+                    }
+                ]
+            },
+            "id": "51be510ddc48edf4362512170123923f"
+        },
+        {
+            "name": "OTK Storage Configuration",
+            "guid": "db047e91-52db-4176-a3eb-a43aa0c2c67c",
+            "policyReference": {
+                "id": "e001cfd0c1c1ffaa18e187b5e72fc9d0",
                 "resourceUri": "http:\/\/ns.l7tech.com\/2010\/04\/gateway-management\/policies"
             },
             "encapsulatedArguments": {
                 "encapsulatedAssertionArgument": [
                     {
                         "ordinal": "1",
-                        "argumentName": "apiida.id",
+                        "argumentName": "custom",
                         "argumentType": "string",
-                        "guiLabel": "Cache ID",
-                        "guiPrompt": "true"
-                    },
-                    {
-                        "ordinal": "2",
-                        "argumentName": "apiida.key",
-                        "argumentType": "string",
-                        "guiLabel": "Cache Key",
-                        "guiPrompt": "true"
-                    },
-                    {
-                        "ordinal": "3",
-                        "argumentName": "apiida.timeout",
-                        "argumentType": "string",
-                        "guiLabel": "Cache Timeout (s) (optional)",
+                        "guiLabel": "Custom input values",
                         "guiPrompt": "true"
                     }
                 ]
@@ -35,11 +77,128 @@
             "encapsulatedResults": {
                 "encapsulatedAssertionResult": [
                     {
-                        "resultName": "apiida.var.cacheExpires",
+                        "resultName": "custom_data",
                         "resultType": "string"
                     },
                     {
-                        "resultName": "apiida.var.cachePayload",
+                        "resultName": "dbsystem",
+                        "resultType": "string"
+                    },
+                    {
+                        "resultName": "host_oauth_clientstore_server",
+                        "resultType": "string"
+                    },
+                    {
+                        "resultName": "host_oauth_session_server",
+                        "resultType": "string"
+                    },
+                    {
+                        "resultName": "host_oauth_tokenstore_server",
+                        "resultType": "string"
+                    },
+                    {
+                        "resultName": "max_oauth_token_behaviour",
+                        "resultType": "string"
+                    },
+                    {
+                        "resultName": "max_oauth_token_count",
+                        "resultType": "string"
+                    },
+                    {
+                        "resultName": "separate_schemas",
+                        "resultType": "string"
+                    }
+                ]
+            },
+            "properties": {
+                "property": [
+                    {
+                        "key": "allowTracing",
+                        "stringValue": {
+                            "value": "true"
+                        }
+                    },
+                    {
+                        "key": "description",
+                        "stringValue": {
+                            "value": "Exports variables that contain OTK configurations that are related to the persistence layer"
+                        }
+                    },
+                    {
+                        "key": "doc_category",
+                        "stringValue": {
+                            "value": "Configuration"
+                        }
+                    },
+                    {
+                        "key": "doc_require_customization",
+                        "stringValue": {
+                            "value": "true"
+                        }
+                    },
+                    {
+                        "key": "doc_usage",
+                        "stringValue": {
+                            "value": "Internal"
+                        }
+                    },
+                    {
+                        "key": "paletteFolder",
+                        "stringValue": {
+                            "value": "internalAssertions"
+                        }
+                    },
+                    {
+                        "key": "paletteIconResourceName",
+                        "stringValue": {
+                            "value": "ServerRegistry.gif"
+                        }
+                    },
+                    {
+                        "key": "passMetricsToParent",
+                        "stringValue": {
+                            "value": "false"
+                        }
+                    },
+                    {
+                        "key": "policyGuid",
+                        "stringValue": {
+                            "value": "71039e77-2081-40df-a892-50097f1c18de"
+                        }
+                    }
+                ]
+            },
+            "id": "e001cfd0c1c1ffaa18e187b5e72fcac5"
+        },
+        {
+            "name": "APIIDA API Control Plane Integration - API-Keys-Retrieve",
+            "guid": "f20bad78-5bc1-41b1-829c-07c49af815ad",
+            "policyReference": {
+                "id": "379db31fbdd5e78c8acc9ba137040c61",
+                "resourceUri": "http:\/\/ns.l7tech.com\/2010\/04\/gateway-management\/policies"
+            },
+            "encapsulatedArguments": {
+                "encapsulatedAssertionArgument": [
+                    {
+                        "ordinal": "1",
+                        "argumentName": "in_apikey_apikey",
+                        "argumentType": "string",
+                        "guiLabel": "API Key",
+                        "guiPrompt": "true"
+                    },
+                    {
+                        "ordinal": "2",
+                        "argumentName": "in_apikey_uuid",
+                        "argumentType": "string",
+                        "guiLabel": "API Key Id",
+                        "guiPrompt": "true"
+                    }
+                ]
+            },
+            "encapsulatedResults": {
+                "encapsulatedAssertionResult": [
+                    {
+                        "resultName": "apikeyList",
                         "resultType": "message"
                     }
                 ]
@@ -53,72 +212,123 @@
                         }
                     },
                     {
-                        "key": "description",
-                        "stringValue": {
-                            "value": "APIIDA Utility\nLoad a cache payload, with optional exires string, from cache."
-                        }
-                    },
-                    {
                         "key": "paletteFolder",
                         "stringValue": {
                             "value": "customAssertions"
                         }
                     },
                     {
-                        "key": "paletteIconBase64",
-                        "stringValue": {
-                            "value": "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8\/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACx\r\njwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADnSURBVDhPYxjcwOBcnqru6YJ1emcKPoHx6cIp\r\nUCnCQPdErozemcI3QPwfhIEGHTY+U84PlSYMdE8XroRpBuMLxdwgcZAhumcKJ4EV4QNARR+RDQCJ\r\nGZ9J4wJ65ShIDqwIHwD69zOyASgYKAdVhh0AbWnBqhGOCzZClWICoGQHdk0QrHum4IPBuWItqHJU\r\nAAy4buyaCv+AoxFoM3bN\/xkYgf6agE0zUHw2SB6qEjvQP12Yjk0z0ObpBDWDgPz+eg6g83egGHC6\r\nYCpRmmHA4lghJ9CQnRADCiaTpBkGQAkF5B2yNJMHGBgAdErH\/3I+lD8AAAAASUVORK5CYII="
-                        }
-                    },
-                    {
                         "key": "passMetricsToParent",
                         "stringValue": {
-                            "value": "true"
+                            "value": "false"
                         }
                     },
                     {
                         "key": "policyGuid",
                         "stringValue": {
-                            "value": "0a9ed253-f2d0-49ae-812e-a3fe4e3dacc0"
+                            "value": "54804a16-4465-40c0-9e10-ab2660e1979b"
                         }
                     }
                 ]
             },
-            "id": "bfd92d70c60448168e42241232b3841e"
+            "id": "f432e3d04f1b33a428a1fc78f730d562"
         },
         {
-            "name": "APIIDA Utility - Logger",
-            "guid": "30c972a0-7dc1-4048-bd2b-0fa3c77b6c6c",
+            "name": "APIIDA API Key Lookup",
+            "guid": "d7941e61-00ac-4a93-9e95-be61d9b295ac",
             "policyReference": {
-                "id": "bfd92d70c60448168e42241232b45b96",
+                "id": "8840cc6bcfd468648dc816432903e1bb",
                 "resourceUri": "http:\/\/ns.l7tech.com\/2010\/04\/gateway-management\/policies"
             },
             "encapsulatedArguments": {
                 "encapsulatedAssertionArgument": [
                     {
                         "ordinal": "1",
-                        "argumentName": "apiida.logString",
+                        "argumentName": "apikey",
                         "argumentType": "string",
-                        "guiLabel": "Log Message",
+                        "guiLabel": "API Key",
                         "guiPrompt": "true"
                     },
                     {
                         "ordinal": "2",
-                        "argumentName": "apiida.logType",
+                        "argumentName": "keysecret",
                         "argumentType": "string",
-                        "guiLabel": "Log Type (Optional)",
+                        "guiLabel": "API Key Secret",
                         "guiPrompt": "true"
                     },
                     {
                         "ordinal": "3",
-                        "argumentName": "apiida.disableScrubber",
-                        "argumentType": "boolean",
-                        "guiLabel": "Disable Scrubber",
+                        "argumentName": "ignoreKeySecret",
+                        "argumentType": "string",
+                        "guiLabel": "Skip API Key Secret Check (default: false)",
                         "guiPrompt": "true"
                     }
                 ]
             },
-            "encapsulatedResults": [],
+            "encapsulatedResults": {
+                "encapsulatedAssertionResult": [
+                    {
+                        "resultName": "apiKeyRecord.found",
+                        "resultType": "string"
+                    },
+                    {
+                        "resultName": "apiKeyRecord.id",
+                        "resultType": "string"
+                    },
+                    {
+                        "resultName": "apiKeyRecord.key",
+                        "resultType": "string"
+                    },
+                    {
+                        "resultName": "apiKeyRecord.label",
+                        "resultType": "string"
+                    },
+                    {
+                        "resultName": "apiKeyRecord.oauthCallbackUrl",
+                        "resultType": "string"
+                    },
+                    {
+                        "resultName": "apiKeyRecord.oauthScope",
+                        "resultType": "string"
+                    },
+                    {
+                        "resultName": "apiKeyRecord.oauthType",
+                        "resultType": "string"
+                    },
+                    {
+                        "resultName": "apiKeyRecord.organization.id",
+                        "resultType": "string"
+                    },
+                    {
+                        "resultName": "apiKeyRecord.organization.name",
+                        "resultType": "string"
+                    },
+                    {
+                        "resultName": "apiKeyRecord.secret",
+                        "resultType": "string"
+                    },
+                    {
+                        "resultName": "apiKeyRecord.service",
+                        "resultType": "string"
+                    },
+                    {
+                        "resultName": "apiKeyRecord.status",
+                        "resultType": "string"
+                    },
+                    {
+                        "resultName": "apikeyJson",
+                        "resultType": "message"
+                    },
+                    {
+                        "resultName": "error.code",
+                        "resultType": "string"
+                    },
+                    {
+                        "resultName": "error.message",
+                        "resultType": "string"
+                    }
+                ]
+            },
             "properties": {
                 "property": [
                     {
@@ -128,72 +338,43 @@
                         }
                     },
                     {
-                        "key": "description",
-                        "stringValue": {
-                            "value": "APIIDA Utility\nLog a message following logging profile rules."
-                        }
-                    },
-                    {
                         "key": "paletteFolder",
                         "stringValue": {
                             "value": "customAssertions"
                         }
                     },
                     {
-                        "key": "paletteIconBase64",
-                        "stringValue": {
-                            "value": "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8\/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACx\r\njwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADnSURBVDhPYxjcwOBcnqru6YJ1emcKPoHx6cIp\r\nUCnCQPdErozemcI3QPwfhIEGHTY+U84PlSYMdE8XroRpBuMLxdwgcZAhumcKJ4EV4QNARR+RDQCJ\r\nGZ9J4wJ65ShIDqwIHwD69zOyASgYKAdVhh0AbWnBqhGOCzZClWICoGQHdk0QrHum4IPBuWItqHJU\r\nAAy4buyaCv+AoxFoM3bN\/xkYgf6agE0zUHw2SB6qEjvQP12Yjk0z0ObpBDWDgPz+eg6g83egGHC6\r\nYCpRmmHA4lghJ9CQnRADCiaTpBkGQAkF5B2yNJMHGBgAdErH\/3I+lD8AAAAASUVORK5CYII="
-                        }
-                    },
-                    {
                         "key": "passMetricsToParent",
                         "stringValue": {
-                            "value": "true"
+                            "value": "false"
                         }
                     },
                     {
                         "key": "policyGuid",
                         "stringValue": {
-                            "value": "7ea45cb7-499a-4463-8c44-11405a3096b0"
+                            "value": "6e4aef5f-6520-42f4-9eed-fa20a4cad557"
                         }
                     }
                 ]
             },
-            "id": "bfd92d70c60448168e42241232b45bfe"
+            "id": "8840cc6bcfd468648dc816432903e6b3"
         },
         {
-            "name": "APIIDA Utility - Log Internal String",
-            "guid": "49dd455c-1208-43ce-becc-95884947d92f",
+            "name": "APIIDA API Control Plane Integration - API-Plans-Retrieve",
+            "guid": "5af3bd30-d1f0-4e79-8cf3-d9b40650d67f",
             "policyReference": {
-                "id": "bfd92d70c60448168e42241232b383af",
+                "id": "379db31fbdd5e78c8acc9ba13703f1f1",
                 "resourceUri": "http:\/\/ns.l7tech.com\/2010\/04\/gateway-management\/policies"
             },
-            "encapsulatedArguments": {
-                "encapsulatedAssertionArgument": [
+            "encapsulatedArguments": [],
+            "encapsulatedResults": {
+                "encapsulatedAssertionResult": [
                     {
-                        "ordinal": "1",
-                        "argumentName": "apiida.code",
-                        "argumentType": "string",
-                        "guiLabel": "String Code",
-                        "guiPrompt": "true"
-                    },
-                    {
-                        "ordinal": "2",
-                        "argumentName": "apiida.preString",
-                        "argumentType": "string",
-                        "guiLabel": "Pre String",
-                        "guiPrompt": "true"
-                    },
-                    {
-                        "ordinal": "3",
-                        "argumentName": "apiida.postString",
-                        "argumentType": "string",
-                        "guiLabel": "Post String (optional)",
-                        "guiPrompt": "true"
+                        "resultName": "apiPlansXml",
+                        "resultType": "message"
                     }
                 ]
             },
-            "encapsulatedResults": [],
             "properties": {
                 "property": [
                     {
@@ -203,9 +384,74 @@
                         }
                     },
                     {
-                        "key": "description",
+                        "key": "paletteFolder",
                         "stringValue": {
-                            "value": "APIIDA Utility\nLog an internal string with optional Post-String."
+                            "value": "customAssertions"
+                        }
+                    },
+                    {
+                        "key": "passMetricsToParent",
+                        "stringValue": {
+                            "value": "false"
+                        }
+                    },
+                    {
+                        "key": "policyGuid",
+                        "stringValue": {
+                            "value": "834c39cd-17ac-4a54-a641-a49a17fc02f8"
+                        }
+                    }
+                ]
+            },
+            "id": "f432e3d04f1b33a428a1fc78f730d4ee"
+        },
+        {
+            "name": "APIIDA API Plan Lookup",
+            "guid": "b74b030c-f283-478a-95bb-a760a6bc4dce",
+            "policyReference": {
+                "id": "8840cc6bcfd468648dc816432903e19d",
+                "resourceUri": "http:\/\/ns.l7tech.com\/2010\/04\/gateway-management\/policies"
+            },
+            "encapsulatedArguments": {
+                "encapsulatedAssertionArgument": [
+                    {
+                        "ordinal": "1",
+                        "argumentName": "apiId",
+                        "argumentType": "string",
+                        "guiLabel": "API Id",
+                        "guiPrompt": "true"
+                    },
+                    {
+                        "ordinal": "2",
+                        "argumentName": "subscribed_plans",
+                        "argumentType": "string",
+                        "guiLabel": "Pubscribed Plans (comma separated)",
+                        "guiPrompt": "true"
+                    }
+                ]
+            },
+            "encapsulatedResults": {
+                "encapsulatedAssertionResult": [
+                    {
+                        "resultName": "apiPlanJson",
+                        "resultType": "message"
+                    },
+                    {
+                        "resultName": "error.code",
+                        "resultType": "string"
+                    },
+                    {
+                        "resultName": "error.message",
+                        "resultType": "string"
+                    }
+                ]
+            },
+            "properties": {
+                "property": [
+                    {
+                        "key": "allowTracing",
+                        "stringValue": {
+                            "value": "false"
                         }
                     },
                     {
@@ -215,81 +461,58 @@
                         }
                     },
                     {
-                        "key": "paletteIconBase64",
-                        "stringValue": {
-                            "value": "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8\/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACx\r\njwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADnSURBVDhPYxjcwOBcnqru6YJ1emcKPoHx6cIp\r\nUCnCQPdErozemcI3QPwfhIEGHTY+U84PlSYMdE8XroRpBuMLxdwgcZAhumcKJ4EV4QNARR+RDQCJ\r\nGZ9J4wJ65ShIDqwIHwD69zOyASgYKAdVhh0AbWnBqhGOCzZClWICoGQHdk0QrHum4IPBuWItqHJU\r\nAAy4buyaCv+AoxFoM3bN\/xkYgf6agE0zUHw2SB6qEjvQP12Yjk0z0ObpBDWDgPz+eg6g83egGHC6\r\nYCpRmmHA4lghJ9CQnRADCiaTpBkGQAkF5B2yNJMHGBgAdErH\/3I+lD8AAAAASUVORK5CYII="
-                        }
-                    },
-                    {
                         "key": "passMetricsToParent",
                         "stringValue": {
-                            "value": "true"
+                            "value": "false"
                         }
                     },
                     {
                         "key": "policyGuid",
                         "stringValue": {
-                            "value": "6ef74116-8afc-4ed0-9b58-c01790f48be4"
+                            "value": "2becbab8-4972-4b69-a995-585d7b1c707d"
                         }
                     }
                 ]
             },
-            "id": "bfd92d70c60448168e42241232b384ce"
+            "id": "93e0d6cd02423930cb3dfbe9d791febc"
         },
         {
-            "name": "APIIDA Utility - Store Cache",
-            "guid": "2fac74fc-4e2b-47ad-84cc-7dc34a30784e",
+            "name": "APIIDA Apply API Plan Limits",
+            "guid": "fbe97e28-fb68-45c8-91b1-e0e57450f047",
             "policyReference": {
-                "id": "bfd92d70c60448168e42241232b383e0",
+                "id": "8840cc6bcfd468648dc816432903e588",
                 "resourceUri": "http:\/\/ns.l7tech.com\/2010\/04\/gateway-management\/policies"
             },
             "encapsulatedArguments": {
                 "encapsulatedAssertionArgument": [
                     {
                         "ordinal": "1",
-                        "argumentName": "apiida.id",
+                        "argumentName": "counterName",
                         "argumentType": "string",
-                        "guiLabel": "Cache ID",
+                        "guiLabel": "Counter Name",
                         "guiPrompt": "true"
                     },
                     {
                         "ordinal": "2",
-                        "argumentName": "apiida.key",
-                        "argumentType": "string",
-                        "guiLabel": "Cache Key",
-                        "guiPrompt": "true"
-                    },
-                    {
-                        "ordinal": "3",
-                        "argumentName": "apiida.timeout",
-                        "argumentType": "string",
-                        "guiLabel": "Cache Timeout (s) (optional)",
-                        "guiPrompt": "true"
-                    },
-                    {
-                        "ordinal": "4",
-                        "argumentName": "apiida.maxSize",
-                        "argumentType": "string",
-                        "guiLabel": "Maximum Size (B) (optional)",
-                        "guiPrompt": "true"
-                    },
-                    {
-                        "ordinal": "5",
-                        "argumentName": "apiida.payload",
+                        "argumentName": "apiPlanJson",
                         "argumentType": "message",
-                        "guiLabel": "Payload",
-                        "guiPrompt": "true"
-                    },
-                    {
-                        "ordinal": "6",
-                        "argumentName": "apiida.expires",
-                        "argumentType": "boolean",
-                        "guiLabel": "Store Expires String",
+                        "guiLabel": "API Plan",
                         "guiPrompt": "true"
                     }
                 ]
             },
-            "encapsulatedResults": [],
+            "encapsulatedResults": {
+                "encapsulatedAssertionResult": [
+                    {
+                        "resultName": "error.code",
+                        "resultType": "string"
+                    },
+                    {
+                        "resultName": "error.message",
+                        "resultType": "string"
+                    }
+                ]
+            },
             "properties": {
                 "property": [
                     {
@@ -299,106 +522,26 @@
                         }
                     },
                     {
-                        "key": "description",
-                        "stringValue": {
-                            "value": "APIIDA Utility\nStore a message payload to cache, with optional exires string."
-                        }
-                    },
-                    {
                         "key": "paletteFolder",
                         "stringValue": {
                             "value": "customAssertions"
                         }
                     },
                     {
-                        "key": "paletteIconBase64",
-                        "stringValue": {
-                            "value": "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8\/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACx\r\njwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADnSURBVDhPYxjcwOBcnqru6YJ1emcKPoHx6cIp\r\nUCnCQPdErozemcI3QPwfhIEGHTY+U84PlSYMdE8XroRpBuMLxdwgcZAhumcKJ4EV4QNARR+RDQCJ\r\nGZ9J4wJ65ShIDqwIHwD69zOyASgYKAdVhh0AbWnBqhGOCzZClWICoGQHdk0QrHum4IPBuWItqHJU\r\nAAy4buyaCv+AoxFoM3bN\/xkYgf6agE0zUHw2SB6qEjvQP12Yjk0z0ObpBDWDgPz+eg6g83egGHC6\r\nYCpRmmHA4lghJ9CQnRADCiaTpBkGQAkF5B2yNJMHGBgAdErH\/3I+lD8AAAAASUVORK5CYII="
-                        }
-                    },
-                    {
                         "key": "passMetricsToParent",
-                        "stringValue": {
-                            "value": "true"
-                        }
-                    },
-                    {
-                        "key": "policyGuid",
-                        "stringValue": {
-                            "value": "71a42f35-023e-4662-8664-b10436e3b5c3"
-                        }
-                    }
-                ]
-            },
-            "id": "bfd92d70c60448168e42241232b38450"
-        },
-        {
-            "name": "APIIDA Utility - Delete Cache",
-            "guid": "e51b0247-0a4e-4396-88b6-93cb99385831",
-            "policyReference": {
-                "id": "bfd92d70c60448168e42241232b3856f",
-                "resourceUri": "http:\/\/ns.l7tech.com\/2010\/04\/gateway-management\/policies"
-            },
-            "encapsulatedArguments": {
-                "encapsulatedAssertionArgument": [
-                    {
-                        "ordinal": "1",
-                        "argumentName": "apiida.id",
-                        "argumentType": "string",
-                        "guiLabel": "Cache ID",
-                        "guiPrompt": "true"
-                    },
-                    {
-                        "ordinal": "2",
-                        "argumentName": "apiida.key",
-                        "argumentType": "string",
-                        "guiLabel": "Cache Key",
-                        "guiPrompt": "true"
-                    }
-                ]
-            },
-            "encapsulatedResults": [],
-            "properties": {
-                "property": [
-                    {
-                        "key": "allowTracing",
                         "stringValue": {
                             "value": "false"
                         }
                     },
                     {
-                        "key": "description",
-                        "stringValue": {
-                            "value": "APIIDA Utility\nDelete a cache entry."
-                        }
-                    },
-                    {
-                        "key": "paletteFolder",
-                        "stringValue": {
-                            "value": "customAssertions"
-                        }
-                    },
-                    {
-                        "key": "paletteIconBase64",
-                        "stringValue": {
-                            "value": "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8\/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACx\r\njwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADnSURBVDhPYxjcwOBcnqru6YJ1emcKPoHx6cIp\r\nUCnCQPdErozemcI3QPwfhIEGHTY+U84PlSYMdE8XroRpBuMLxdwgcZAhumcKJ4EV4QNARR+RDQCJ\r\nGZ9J4wJ65ShIDqwIHwD69zOyASgYKAdVhh0AbWnBqhGOCzZClWICoGQHdk0QrHum4IPBuWItqHJU\r\nAAy4buyaCv+AoxFoM3bN\/xkYgf6agE0zUHw2SB6qEjvQP12Yjk0z0ObpBDWDgPz+eg6g83egGHC6\r\nYCpRmmHA4lghJ9CQnRADCiaTpBkGQAkF5B2yNJMHGBgAdErH\/3I+lD8AAAAASUVORK5CYII="
-                        }
-                    },
-                    {
-                        "key": "passMetricsToParent",
-                        "stringValue": {
-                            "value": "true"
-                        }
-                    },
-                    {
                         "key": "policyGuid",
                         "stringValue": {
-                            "value": "dc5b6700-f9e5-425b-ad86-14520935a036"
+                            "value": "b6cddd56-e897-48e3-a105-8b8b008df51d"
                         }
                     }
                 ]
             },
-            "id": "bfd92d70c60448168e42241232b385a5"
+            "id": "93e0d6cd02423930cb3dfbe9d7920cf6"
         }
     ]
 }
