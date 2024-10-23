@@ -1,0 +1,43 @@
+{
+    "privatekey": [
+        {
+            "alias": "SSL",
+            "keystoreId": "00000000000000000000000000000002",
+            "certificateChain": {
+                "certificateData": [
+                    {
+                        "issuerName": "CN%3Dcd82b3a858ec",
+                        "serialNumber": "18203110741506515778",
+                        "subjectName": "CN%3Dcd82b3a858ec",
+                        "encoded": "MIIC8zCCAdugAwIBAgIJAPyecMZyl+NCMA0GCSqGSIb3DQEBDAUAMBcxFTATBgNVBAMTDGNkODJiM2E4NThlYzAeFw0yNDAzMDcxMzAxNTRaFw0zNDAzMDUxMzAxNTRaMBcxFTATBgNVBAMTDGNkODJiM2E4NThlYzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAI4F8YKSGJ7BMVLXabLKGW04ics9gUHLGL+kXZkvASHRXC+ypkOyYSX\/JG5saPsJUevQqhuxLbBy1rBIp1UphBpYc7aGdP2r2h+8VDbW07t5sW3jf20ZecjMsfjmKn5L\/m9nEoPu+IV0rVR\/ficQkgMApwQfT6vK87WSaPLzT0uHvYGfgK27F1ube3xdbSV0HVGbK8zxVkMKVm2ZCqIZz7L7gs1NyyNfO\/OF9x0PUbba1vNzZ\/b1UK6zOSPMyV1FFW7ugXG5syXp8ncfnnGrgVVthqUdd5x7kLRXdTuNbAwt8VKG00SIRcH5QcjwvfKByIdiXYriYgnEvZUWVfUZp7cCAwEAAaNCMEAwHQYDVR0OBBYEFKyqP9rze4K+5IpaWNnscqyZW36dMB8GA1UdIwQYMBaAFKyqP9rze4K+5IpaWNnscqyZW36dMA0GCSqGSIb3DQEBDAUAA4IBAQB4LEONaaMrRp8YtYqIy3vTHwU+JLGY6UcJUkt5u4XbLdXUb1DNjHJpaDpBcDdjN82YUFGiu70Jz+N3AifkMZaV1RvHrcq0bJSrUhj71PhW5jhbQ2e44LyOE4irPWOG5qHSADMWQ\/shvIZabTj3HxNdXm3mHZnhxd0PUsEcEUlXLZ\/M6ZN2huAFLP\/g8JXiFBXsyUgaCZtPqwupCcs4c\/uMHjkq9BXTsd94k8eZK\/+PvSTpxt5SKmZZC4Dths5KWfaMvGlikZX1xR34T5IwcsfjbngxqPE1AkPd4YdjgBdKaranFl7eCakU8Ah9oOJS96sJzkzo0O44U0oMtR2OUe72"
+                    }
+                ]
+            },
+            "properties": {
+                "property": [
+                    {
+                        "key": "keyAlgorithm",
+                        "stringValue": {
+                            "value": "RSA"
+                        }
+                    },
+                    {
+                        "key": "keyData",
+                        "stringValue": {
+                            "value": "$L7C2$1,BhtBtSuBqSrnn3apSaUwlUhzGNCXyNbq9LjA6kKoCsM=$vbmagUn3PjzFaVeOBpG6RMHwAt\/JlYKRdAqAlUq4FTwm\/eo5JxI0wa\/JIM5432Kk+mLIDrxr8Rn7+Ck2P+32bKrpxif7axDVeGJWPF9t8GlHm3EWZt1j+afNEHYS2Zdv83T0ddfXJnTQdn40vyJGzCxFoRE0RvtjsqRFj5snT2iR\/rfbCmhtVHxY7L2XIuEbcuzYadwcMxCS6e7J+J9A9sqUxn5r3SThTl6wT4MyLDi1cPnS01s1geZrYPaMgPW148Gg3GEaQu6TasiPcWxMAUHkP3mzkjwBScyWapn3CQtK2Cv3mHiu71fcZnX6tA9y8GAwYfa7gMieEucIs30uyw1nU2TO7Ss7B042Tjju4\/xp6G7LPSwSOjtwz4vLDK1l8Tp893d8GAj5t09LEOx1H9RYg5aq3bdrm82golWb8TsBqHefZWrYlu0UaMF2CXVZ7qekKymTt+OjHQt3ep4vGf3zLpcq8QIivXqyAdyDGvqjAumqFYSRb4YeF+Rd78UvSBkD5pwgZdQX6ljj4eCHrtaNnlbG599Jwi7gnZyrKgKmnnyMr4sKj8PC5FCOR8sYrcz\/UFhIjfUSwprwKalMEUoyo6wqULyvqoNuxAeHmfIeTGWBJNTbDhs9KfAi9CF2a\/lif7hB7ZdT9FlbyhfboIAhufp+ahjQ69djpslFJlGvHvfsz8MqXGSiNS573AOu7\/qGysU9Jtp1YwRcEx\/kC0uhmXoDDtcmLPGDY7hjvlVjiisrH4NBRgWEFuPXfGtyndZPR4ZKPSoaJuc0XLly\/vbaEwumi0tVENGAIbCpncnDtUj\/0zD\/hCmF5OoQ9sP3yojEtIKZTYp836slPGLc\/Q+iYP4b6M+onjGcCAbC0Rx9\/0ISzZeWt2gJApni1k0dJA5T5A1loi+\/BHZK8XDGnLuP+rUE9ibFuZWcfT4+umD3IRGEe8pV3FCGrF39L5FIqH2QODrWu+EsOeCnJSjSFdETyZO2bR33+ZQHaNpRcOhRiGk89lwH7ssPlnbGxi4rxlN+Pan1p0UF5u8Q+IxCv5lxccq3WZFh2Qmb9hyimqAGO\/JuEN7cjF35DiuHNhJks7KYprCHXlrFJ5+kIDtcOg\/NfV4Tc1jvb\/sTSm6whHzri4s2dhmPJnEtgm+ULNZEdK9c2VkfZUu0jZxfk2V5vdq+J+nGcnx77bR6b3PTUFt8Ocg5YtfWPlLBE4EL5w3T2CUDRIu6KbuzEOXDu3tAko\/4gZIgosA37RmFfLbZNWKzub6OShTguKz8nZo\/cDo1af1HURZC2x+xGkuwR4RX6kRWxAg5uQsZ2x+TQwkF20EIn4g1KRCpegUNQ1+Mvja9GTagO7ZWY\/1cu1OiCRyKXR99ofqEBNUw4zikGcP9YjXd7YdA\/NGyisO+2AsEeN8M4xVnyyPBhiSkJn1uJwJI1yC5PmyvUuK\/xJnZvPgoLVuWKhVnr61bCSjuNDo\/QwQQ+Jlq1t26THuO48ZmtD2KU8llbly7siSjHYqs4hyfqXkPlbq3KQdhBQFvrHJVn+GYkgdAtzb0sQpcTkNYOkheT5iJSTGYmxT9mXUI8emtgSxtECkHQudFEqqAA5hIkwWWNAnYY6vuYtlEm1YqFRgDvb\/jsT47R\/+lEHvUNTn+3Ak8oh4ITsnhP5hcyUZoEuOg0ajB5x7WnxCq1w1i5huUPyGZVHxGp1FZBWCr+9e8Xi0=",
+                            "bundleKey": "$L7C2$9fa1f,oHJjQAxtuQKvz4Q2WoyBzRUkc1hOqUeaQ4UQDQLt4cU=$pmAOcI6+lIdwe57jeM+nhyYSHzEfrueVhu8pUvp8LfuSTKSemgeN0Avy2lfKBUE1dlwarwhIAy652dC+P4VB4zPGvt5ce+JyHeFRt4DODbsqsMz0NVMgnAZW4rLlqxFy",
+                            "algorithm": "RSA"
+                        }
+                    },
+                    {
+                        "key": "specialPurposes",
+                        "stringValue": {
+                            "value": "Default SSL Key"
+                        }
+                    }
+                ]
+            },
+            "id": "00000000000000000000000000000002:SSL"
+        }
+    ]
+}
