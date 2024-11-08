@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsp:Policy xmlns:L7p="http://www.layer7tech.com/ws/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2002/12/policy">
+    <wsp:All wsp:Usage="Required">
+        <L7p:CommentAssertion>
+            <L7p:Comment stringValue="================================================================"/>
+        </L7p:CommentAssertion>
+        <L7p:CommentAssertion>
+            <L7p:Comment stringValue="APIIDA Utility - logInternalString"/>
+        </L7p:CommentAssertion>
+        <L7p:CommentAssertion>
+            <L7p:Comment stringValue="Utility to log an internal String."/>
+        </L7p:CommentAssertion>
+        <L7p:CommentAssertion>
+            <L7p:Comment stringValue="-------------------------------------------------------------------------------------------"/>
+        </L7p:CommentAssertion>
+        <L7p:CommentAssertion>
+            <L7p:Comment stringValue="INPUT:"/>
+        </L7p:CommentAssertion>
+        <L7p:CommentAssertion>
+            <L7p:Comment stringValue="apiida.code (String) - String Code"/>
+        </L7p:CommentAssertion>
+        <L7p:CommentAssertion>
+            <L7p:Comment stringValue="apiida.preString (String) - String to add before"/>
+        </L7p:CommentAssertion>
+        <L7p:CommentAssertion>
+            <L7p:Comment stringValue="apiida.postString (String) - String to append afterwards (placed in brackets)"/>
+        </L7p:CommentAssertion>
+        <L7p:CommentAssertion>
+            <L7p:Comment stringValue="-------------------------------------------------------------------------------------------"/>
+        </L7p:CommentAssertion>
+        <L7p:CommentAssertion>
+            <L7p:Comment stringValue="NOTES:"/>
+        </L7p:CommentAssertion>
+        <L7p:CommentAssertion>
+            <L7p:Comment stringValue="- Uses CWP: apiida.utils.intrnalStrings"/>
+        </L7p:CommentAssertion>
+        <L7p:CommentAssertion>
+            <L7p:Comment stringValue="================================================================"/>
+        </L7p:CommentAssertion>
+        <L7p:CommentAssertion>
+            <L7p:Comment stringValue=" "/>
+        </L7p:CommentAssertion>
+        <L7p:CommentAssertion>
+            <L7p:Comment stringValue="------------------------------------------------------------------------"/>
+        </L7p:CommentAssertion>
+        <L7p:CommentAssertion>
+            <L7p:Comment stringValue="Ensure Strings loaded"/>
+        </L7p:CommentAssertion>
+        <L7p:CommentAssertion>
+            <L7p:Comment stringValue="------------------------------------------------------------------------"/>
+        </L7p:CommentAssertion>
+        <wsp:OneOrMore wsp:Usage="Required">
+            <L7p:ComparisonAssertion>
+                <L7p:CaseSensitive booleanValue="false"/>
+                <L7p:Expression1 stringValue="${service.apiida.utils.internalStrings.mainpart}"/>
+                <L7p:Expression2 stringValue=""/>
+                <L7p:Negate booleanValue="true"/>
+                <L7p:Operator operator="EMPTY"/>
+                <L7p:Predicates predicates="included">
+                    <L7p:item binary="included">
+                        <L7p:CaseSensitive booleanValue="false"/>
+                        <L7p:Negated booleanValue="true"/>
+                        <L7p:Operator operator="EMPTY"/>
+                        <L7p:RightValue stringValue=""/>
+                    </L7p:item>
+                </L7p:Predicates>
+            </L7p:ComparisonAssertion>
+            <wsp:All wsp:Usage="Required">
+                <L7p:SetVariable>
+                    <L7p:Base64Expression stringValue="JHtnYXRld2F5LmFwaWlkYS51dGlscy5pbnRlcm5hbFN0cmluZ3N9"/>
+                    <L7p:ContentType stringValue="application/xml; charset=utf-8"/>
+                    <L7p:DataType variableDataType="message"/>
+                    <L7p:VariableToSet stringValue="service.apiida.utils.internalStrings"/>
+                </L7p:SetVariable>
+                <L7p:Regex>
+                    <L7p:AssertionComment assertionComment="included">
+                        <L7p:Properties mapValue="included">
+                            <L7p:entry>
+                                <L7p:key stringValue="RIGHT.COMMENT"/>
+                                <L7p:value stringValue="[Strip Comments]"/>
+                            </L7p:entry>
+                        </L7p:Properties>
+                    </L7p:AssertionComment>
+                    <L7p:AutoTarget booleanValue="false"/>
+                    <L7p:OtherTargetMessageVariable stringValue="service.apiida.utils.internalStrings"/>
+                    <L7p:Regex stringValue="\s*\&lt;\!\-\-((?!\-\-\>)[\s\S])*\-\-\>\s*"/>
+                    <L7p:Replace booleanValue="true"/>
+                    <L7p:Replacement stringValue=""/>
+                    <L7p:Target target="OTHER"/>
+                </L7p:Regex>
+            </wsp:All>
+        </wsp:OneOrMore>
+        <L7p:CommentAssertion>
+            <L7p:Comment stringValue=" "/>
+        </L7p:CommentAssertion>
+        <L7p:CommentAssertion>
+            <L7p:Comment stringValue="------------------------------------------------------------------------"/>
+        </L7p:CommentAssertion>
+        <L7p:CommentAssertion>
+            <L7p:Comment stringValue="Log Actual String"/>
+        </L7p:CommentAssertion>
+        <L7p:CommentAssertion>
+            <L7p:Comment stringValue="------------------------------------------------------------------------"/>
+        </L7p:CommentAssertion>
+        <wsp:OneOrMore wsp:Usage="Required">
+            <wsp:All wsp:Usage="Required">
+                <wsp:OneOrMore wsp:Usage="Required">
+                    <wsp:All wsp:Usage="Required">
+                        <L7p:ResponseXpathAssertion>
+                            <L7p:VariablePrefix stringValue="apiida.tempXPath"/>
+                            <L7p:XmlMsgSrc stringValue="service.apiida.utils.internalStrings"/>
+                            <L7p:XpathExpression xpathExpressionValue="included">
+                                <L7p:Expression stringValue="/apiidaInternalStrings/string[@code=$apiida.code]"/>
+                                <L7p:Namespaces mapValue="included">
+                                    <L7p:entry>
+                                    <L7p:key stringValue="s"/>
+                                    <L7p:value stringValue="http://schemas.xmlsoap.org/soap/envelope/"/>
+                                    </L7p:entry>
+                                </L7p:Namespaces>
+                                <L7p:XpathVersion xpathVersion="XPATH_1_0"/>
+                            </L7p:XpathExpression>
+                        </L7p:ResponseXpathAssertion>
+                        <L7p:ComparisonAssertion>
+                            <L7p:CaseSensitive booleanValue="false"/>
+                            <L7p:Expression1 stringValue="${apiida.tempXPath.result}"/>
+                            <L7p:Expression2 stringValue=""/>
+                            <L7p:Negate booleanValue="true"/>
+                            <L7p:Operator operator="EMPTY"/>
+                            <L7p:Predicates predicates="included">
+                                <L7p:item binary="included">
+                                    <L7p:CaseSensitive booleanValue="false"/>
+                                    <L7p:Negated booleanValue="true"/>
+                                    <L7p:Operator operator="EMPTY"/>
+                                    <L7p:RightValue stringValue=""/>
+                                </L7p:item>
+                            </L7p:Predicates>
+                        </L7p:ComparisonAssertion>
+                        <L7p:SetVariable>
+                            <L7p:Base64Expression stringValue="JHthcGlpZGEudGVtcFhQYXRoLnJlc3VsdH0="/>
+                            <L7p:VariableToSet stringValue="apiida.finalString"/>
+                        </L7p:SetVariable>
+                    </wsp:All>
+                    <wsp:All wsp:Usage="Required">
+                        <L7p:ComparisonAssertion>
+                            <L7p:CaseSensitive booleanValue="false"/>
+                            <L7p:Expression1 stringValue="${apiida.code}"/>
+                            <L7p:Expression2 stringValue=""/>
+                            <L7p:Operator operator="EMPTY"/>
+                            <L7p:Predicates predicates="included">
+                                <L7p:item binary="included">
+                                    <L7p:CaseSensitive booleanValue="false"/>
+                                    <L7p:Operator operator="EMPTY"/>
+                                    <L7p:RightValue stringValue=""/>
+                                </L7p:item>
+                            </L7p:Predicates>
+                        </L7p:ComparisonAssertion>
+                        <L7p:SetVariable>
+                            <L7p:Base64Expression stringValue=""/>
+                            <L7p:VariableToSet stringValue="apiida.finalString"/>
+                        </L7p:SetVariable>
+                    </wsp:All>
+                    <L7p:assertionComment>
+                        <L7p:Properties mapValue="included">
+                            <L7p:entry>
+                                <L7p:key stringValue="RIGHT.COMMENT"/>
+                                <L7p:value stringValue="[Add Internal String if needed]"/>
+                            </L7p:entry>
+                        </L7p:Properties>
+                    </L7p:assertionComment>
+                </wsp:OneOrMore>
+                <wsp:OneOrMore wsp:Usage="Required">
+                    <wsp:All wsp:Usage="Required">
+                        <L7p:ComparisonAssertion>
+                            <L7p:CaseSensitive booleanValue="false"/>
+                            <L7p:Expression1 stringValue="${apiida.preString}"/>
+                            <L7p:Expression2 stringValue=""/>
+                            <L7p:Negate booleanValue="true"/>
+                            <L7p:Operator operator="EMPTY"/>
+                            <L7p:Predicates predicates="included">
+                                <L7p:item binary="included">
+                                    <L7p:CaseSensitive booleanValue="false"/>
+                                    <L7p:Negated booleanValue="true"/>
+                                    <L7p:Operator operator="EMPTY"/>
+                                    <L7p:RightValue stringValue=""/>
+                                </L7p:item>
+                            </L7p:Predicates>
+                        </L7p:ComparisonAssertion>
+                        <L7p:SetVariable>
+                            <L7p:Base64Expression stringValue="JHthcGlpZGEucHJlU3RyaW5nfSAke2FwaWlkYS5maW5hbFN0cmluZ30="/>
+                            <L7p:VariableToSet stringValue="apiida.finalString"/>
+                        </L7p:SetVariable>
+                    </wsp:All>
+                    <L7p:TrueAssertion/>
+                    <L7p:assertionComment>
+                        <L7p:Properties mapValue="included">
+                            <L7p:entry>
+                                <L7p:key stringValue="RIGHT.COMMENT"/>
+                                <L7p:value stringValue="[Add PreString]"/>
+                            </L7p:entry>
+                        </L7p:Properties>
+                    </L7p:assertionComment>
+                </wsp:OneOrMore>
+                <wsp:OneOrMore wsp:Usage="Required">
+                    <wsp:All wsp:Usage="Required">
+                        <L7p:ComparisonAssertion>
+                            <L7p:CaseSensitive booleanValue="false"/>
+                            <L7p:Expression1 stringValue="${apiida.postString}"/>
+                            <L7p:Expression2 stringValue=""/>
+                            <L7p:Negate booleanValue="true"/>
+                            <L7p:Operator operator="EMPTY"/>
+                            <L7p:Predicates predicates="included">
+                                <L7p:item binary="included">
+                                    <L7p:CaseSensitive booleanValue="false"/>
+                                    <L7p:Negated booleanValue="true"/>
+                                    <L7p:Operator operator="EMPTY"/>
+                                    <L7p:RightValue stringValue=""/>
+                                </L7p:item>
+                            </L7p:Predicates>
+                        </L7p:ComparisonAssertion>
+                        <L7p:SetVariable>
+                            <L7p:Base64Expression stringValue="JHthcGlpZGEuZmluYWxTdHJpbmd9ICgke2FwaWlkYS5wb3N0U3RyaW5nfSk="/>
+                            <L7p:VariableToSet stringValue="apiida.finalString"/>
+                        </L7p:SetVariable>
+                    </wsp:All>
+                    <L7p:TrueAssertion/>
+                    <L7p:assertionComment>
+                        <L7p:Properties mapValue="included">
+                            <L7p:entry>
+                                <L7p:key stringValue="RIGHT.COMMENT"/>
+                                <L7p:value stringValue="[Add PostString]"/>
+                            </L7p:entry>
+                        </L7p:Properties>
+                    </L7p:assertionComment>
+                </wsp:OneOrMore>
+                <wsp:OneOrMore wsp:Usage="Required">
+                    <L7p:ResponseXpathAssertion>
+                        <L7p:VariablePrefix stringValue="apiida.tempXPath"/>
+                        <L7p:XmlMsgSrc stringValue="service.apiida.utils.internalStrings"/>
+                        <L7p:XpathExpression xpathExpressionValue="included">
+                            <L7p:Expression stringValue="/apiidaInternalStrings/string[@code=$apiida.code]/@type"/>
+                            <L7p:Namespaces mapValue="included">
+                                <L7p:entry>
+                                    <L7p:key stringValue="s"/>
+                                    <L7p:value stringValue="http://schemas.xmlsoap.org/soap/envelope/"/>
+                                </L7p:entry>
+                            </L7p:Namespaces>
+                            <L7p:XpathVersion xpathVersion="XPATH_1_0"/>
+                        </L7p:XpathExpression>
+                    </L7p:ResponseXpathAssertion>
+                    <L7p:TrueAssertion/>
+                    <L7p:assertionComment>
+                        <L7p:Properties mapValue="included">
+                            <L7p:entry>
+                                <L7p:key stringValue="RIGHT.COMMENT"/>
+                                <L7p:value stringValue="[Get String Log Type]"/>
+                            </L7p:entry>
+                        </L7p:Properties>
+                    </L7p:assertionComment>
+                </wsp:OneOrMore>
+                <L7p:Encapsulated>
+                    <L7p:EncapsulatedAssertionConfigGuid stringValue="30c972a0-7dc1-4048-bd2b-0fa3c77b6c6c"/>
+                    <L7p:EncapsulatedAssertionConfigName stringValue="APIIDA Utility - Logger"/>
+                    <L7p:Parameters mapValue="included">
+                        <L7p:entry>
+                            <L7p:key stringValue="apiida.disableScrubber"/>
+                            <L7p:value stringValue="false"/>
+                        </L7p:entry>
+                        <L7p:entry>
+                            <L7p:key stringValue="apiida.logString"/>
+                            <L7p:value stringValue="${apiida.finalString}"/>
+                        </L7p:entry>
+                        <L7p:entry>
+                            <L7p:key stringValue="apiida.logType"/>
+                            <L7p:value stringValue="${apiida.tempXPath.result}"/>
+                        </L7p:entry>
+                    </L7p:Parameters>
+                </L7p:Encapsulated>
+            </wsp:All>
+            <L7p:Encapsulated>
+                <L7p:AssertionComment assertionComment="included">
+                    <L7p:Properties mapValue="included">
+                        <L7p:entry>
+                            <L7p:key stringValue="RIGHT.COMMENT"/>
+                            <L7p:value stringValue="[WARNING - String not Found]"/>
+                        </L7p:entry>
+                    </L7p:Properties>
+                </L7p:AssertionComment>
+                <L7p:EncapsulatedAssertionConfigGuid stringValue="30c972a0-7dc1-4048-bd2b-0fa3c77b6c6c"/>
+                <L7p:EncapsulatedAssertionConfigName stringValue="APIIDA Utility - Logger"/>
+                <L7p:Parameters mapValue="included">
+                    <L7p:entry>
+                        <L7p:key stringValue="apiida.disableScrubber"/>
+                        <L7p:value stringValue="false"/>
+                    </L7p:entry>
+                    <L7p:entry>
+                        <L7p:key stringValue="apiida.logString"/>
+                        <L7p:value stringValue="APIIDA General - Internal String CWP or String Code not found (${apiida.code}). "/>
+                    </L7p:entry>
+                    <L7p:entry>
+                        <L7p:key stringValue="apiida.logType"/>
+                        <L7p:value stringValue="WARNING"/>
+                    </L7p:entry>
+                </L7p:Parameters>
+            </L7p:Encapsulated>
+        </wsp:OneOrMore>
+    </wsp:All>
+</wsp:Policy>
