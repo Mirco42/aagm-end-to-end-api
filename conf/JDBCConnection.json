@@ -1,0 +1,48 @@
+{
+    "jdbcconnection": [
+        {
+            "name": "OAuth",
+            "enabled": "true",
+            "properties": {
+                "property": [
+                    {
+                        "key": "maximumPoolSize",
+                        "integerValue": "15"
+                    },
+                    {
+                        "key": "minimumPoolSize",
+                        "integerValue": "3"
+                    }
+                ]
+            },
+            "extension": {
+                "driverClass": "com.mysql.cj.jdbc.Driver",
+                "jdbcUrl": "jdbc:mysql:\/\/l7gw-10444-db:3307\/ssg",
+                "connectionProperties": {
+                    "property": [
+                        {
+                            "key": "EnableCancelTimeout",
+                            "stringValue": {
+                                "value": "true"
+                            }
+                        },
+                        {
+                            "key": "password",
+                            "stringValue": {
+                                "value": "$L7C2$1,YtwSyf0NzNljjZqgRRbs35V+PUg3eWtvnTYEJAu9qiw=$fuZRaEz9m6pt8Zhe+HDyUa0qtHYbqbvsIUo1787w2p1bSVQrnRFjWP1QnlNhilwoRW20+SQ1OlKAYtVNDfdJtA==",
+                                "bundleKey": "$L7C2$9fa1f,Wt4g26WlUye7pJ29JEp9hL+bgdmD17J0PvF7+nXkRCM=$t30t2OlgosxU5Xa+QPkg6LhdV4EguNd85e\/6Zn5ZcKSf\/o5Te2RRKTHygxX6VmCmH66uovKManfchn9Dgwwgtg46JCdbWvLz2BFYalEf1pjVp3JdCO+KrMOD19fVl9Ls"
+                            }
+                        },
+                        {
+                            "key": "user",
+                            "stringValue": {
+                                "value": "root"
+                            }
+                        }
+                    ]
+                }
+            },
+            "id": "cedabd7f249c1123eba3677b08cb1b1a"
+        }
+    ]
+}
